@@ -57,7 +57,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="30dp"
-                    android:text="@string/temperature"
+                    android:text="@string/nothing"
                     style="@style/text_style"
                     android:textSize="40sp"
                     android:textAlignment="center"
@@ -79,7 +79,7 @@
                         android:id="@+id/temperatureHighTextView"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="@string/temperature"
+                        android:text="@string/nothing"
                         style="@style/text_style"
                         android:textSize="15sp"/>
 
@@ -94,7 +94,7 @@
                         android:id="@+id/temperatureLowTextView"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="@string/temperature"
+                        android:text="@string/nothing"
                         style="@style/text_style"
                         android:textSize="15sp"/>
                 </LinearLayout>
@@ -113,7 +113,7 @@
                     android:id="@+id/dateTextView"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/date"
+                    android:text="@string/nothing"
                     style="@style/text_style"
                     android:textSize="12sp"
                     android:textAlignment="center"
@@ -165,7 +165,7 @@
                         android:layout_height="wrap_content"
                         style="@style/text_style"
                         android:layout_gravity="center"
-                        android:text="@string/temperature"
+                        android:text="@string/nothing"
                         android:textSize="25sp"/>
 
                 </LinearLayout>
@@ -194,7 +194,7 @@
                         android:layout_height="wrap_content"
                         style="@style/text_style"
                         android:layout_gravity="center"
-                        android:text="@string/humidity"
+                        android:text="@string/nothing"
                         android:textSize="25sp"/>
 
                 </LinearLayout>
@@ -238,7 +238,7 @@
                     android:id="@+id/dateForecastTextView"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/date"
+                    android:text="@string/nothing"
                     style="@style/text_style"
                     android:textSize="18sp"
                     android:layout_marginTop="20dp"/>
@@ -258,7 +258,7 @@
                         android:id="@+id/temperatureHighForecastTextView"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="@string/temperature"
+                        android:text="@string/nothing"
                         style="@style/text_style"
                         android:textSize="25sp"/>
 
@@ -273,7 +273,7 @@
                         android:id="@+id/temperatureLowForecastTextView"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="@string/temperature"
+                        android:text="@string/nothing"
                         style="@style/text_style"
                         android:textSize="25sp"/>
                 </LinearLayout>

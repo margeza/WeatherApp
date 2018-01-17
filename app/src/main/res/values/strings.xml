@@ -10,4 +10,5 @@
     <string name="temperature_arduino">Temperature</string>
     <string name="hymidity_arduino">Humidity</string>
     <string name="humidity">70%</string>
+    <string name="nothing">---</string>
 </resources>

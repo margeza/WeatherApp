@@ -120,6 +120,10 @@ public class MainActivity extends Activity implements WeatherServiceCallback, Re
         mLayoutManager = new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false);
         mRecyclerView.setLayoutManager(mLayoutManager);
 
+        setCurrentArduinoData();
+    }
+
+    private void setCurrentArduinoData(){
         findBT();
         try {
             openBT();
@@ -181,7 +185,7 @@ public class MainActivity extends Activity implements WeatherServiceCallback, Re
         {
             public void run()
             {
-                Log.d("BLU", "Name: "+"before while");
+
                 while(!Thread.currentThread().isInterrupted() && !stopWorker)
                 {
                     try
@@ -189,7 +193,6 @@ public class MainActivity extends Activity implements WeatherServiceCallback, Re
                         int bytesAvailable = mmInputStream.available();
                         if(bytesAvailable > 0)
                         {
-                            //Log.d("BLU", "Name: "+"in while");
                             byte[] packetBytes = new byte[bytesAvailable];
                             mmInputStream.read(packetBytes);
                             for(int i=0;i<bytesAvailable;i++)
@@ -200,7 +203,6 @@ public class MainActivity extends Activity implements WeatherServiceCallback, Re
                                     byte[] encodedBytes = new byte[readBufferPosition];
                                     System.arraycopy(readBuffer, 0, encodedBytes, 0, encodedBytes.length);
                                     final String data = new String(encodedBytes, "US-ASCII");
-                                    //Log.e("BLU", "Name: "+data);
                                     readBufferPosition = 0;
 
                                     handler.post(new Runnable()
@@ -237,6 +239,7 @@ public class MainActivity extends Activity implements WeatherServiceCallback, Re
         super.onPause();
         locationEditText.setText(city);
         service.refreshWeather(city);
+        //beginListenForData();
     }
 
     @Override
@@ -244,6 +247,7 @@ public class MainActivity extends Activity implements WeatherServiceCallback, Re
         super.onRestart();
         locationEditText.setText(city);
         service.refreshWeather(city);
+        //beginListenForData();
     }
 
     @Override
@@ -251,6 +255,13 @@ public class MainActivity extends Activity implements WeatherServiceCallback, Re
         super.onResume();
         locationEditText.setText(city);
         service.refreshWeather(city);
+        //beginListenForData();
+    }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+        //beginListenForData();
     }
 
     private void initViews(){
